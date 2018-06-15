@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -15,7 +14,7 @@ import com.danteandroid.aacdemo.viewmodel.UserViewModel;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-    private String name="test";
+    private String name = "test";
     private UserViewModel viewModel;
 
     @Override
@@ -37,12 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                Log.d(TAG, "afterTextChanged: ");
                 name = s.toString();
                 viewModel.setUserName(name);
             }
         });
-        show(null);
+
+        if (savedInstanceState == null) {
+            show(null);
+        }
     }
 
     public void show(View view) {

@@ -49,10 +49,14 @@ public class UserFragment extends Fragment {
             String userName = getArguments().getString(USER_NAME);
             viewModel = ViewModelProviders.of(getActivity()).get(UserViewModel.class);
             viewModel.setUserName(userName);
-            viewModel.getUserEntity().observe(this, new Observer<UserEntity>() {
+
+            binding.setUserViewModel(viewModel);
+            viewModel.getMediatorLiveData().observe(getActivity(), new Observer<UserEntity>() {
                 @Override
                 public void onChanged(@Nullable UserEntity userEntity) {
-                    binding.setUser(userEntity);
+                    if (userEntity != null) {
+                        viewModel.setUser(userEntity);
+                    }
                 }
             });
         }

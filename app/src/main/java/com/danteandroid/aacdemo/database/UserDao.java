@@ -8,6 +8,8 @@ import android.arch.persistence.room.Query;
 
 import com.danteandroid.aacdemo.entity.UserEntity;
 
+import java.util.List;
+
 @Dao
 public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -15,4 +17,7 @@ public interface UserDao {
 
     @Query("select * from UserEntity where name = :userName")
     LiveData<UserEntity> load(String userName);
+
+    @Query("select * from UserEntity")
+    LiveData<List<UserEntity>> loadAll();
 }

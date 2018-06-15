@@ -40,4 +40,12 @@ public class UserEntity {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }
