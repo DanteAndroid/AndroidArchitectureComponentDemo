@@ -12,14 +12,9 @@ import com.danteandroid.aacdemo.util.AppExecutors;
 
 @Database(entities = {UserEntity.class}, version = 2, exportSchema = false)
 public abstract class UserDatabase extends RoomDatabase {
-    public static final String DATABASE_NAME = "aac-db";
+    private static final String DATABASE_NAME = "aac-db";
     private static final String TAG = "UserDatabase";
     private static UserDatabase sInstance;
-
-    public static UserDatabase getsInstance() {
-
-        return sInstance;
-    }
 
     public static UserDatabase getInstance(final Context context) {
         if (sInstance == null) {

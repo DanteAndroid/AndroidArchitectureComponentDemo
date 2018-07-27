@@ -24,4 +24,6 @@ public interface UserDao {
 
     @Query("select * from UserEntity")
     LiveData<List<UserEntity>> loadAll();
+
+
 }
