@@ -29,6 +29,7 @@ public class DataRepository {
                 if (sInstance == null) sInstance = new DataRepository(database);
             }
         }
+
         return sInstance;
     }
 
@@ -36,7 +37,6 @@ public class DataRepository {
         AppExecutors.getsInstance().getNetworkIO().execute(new Runnable() {
             @Override
             public void run() {
-                AppExecutors.addDelay();
                 try {
                     UserEntity entity = WebService.getGithubApi().getUser(userName).execute().body();
                     if (entity == null) {

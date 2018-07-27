@@ -21,7 +21,7 @@ android {
     }
 }
 
-def room_version = "1.1.0" // or, for latest rc, use "1.1.1-rc1"
+def room_version = "1.1.1" // or, for latest rc, use "1.1.1-rc1"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

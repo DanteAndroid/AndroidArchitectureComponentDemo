@@ -15,7 +15,7 @@ public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(UserEntity entity);
 
-    @Query("select * from UserEntity where name = :userName")
+    @Query("select * from UserEntity where upper(name)=upper(:userName) ")
     LiveData<UserEntity> load(String userName);
 
     @Query("select * from UserEntity")
