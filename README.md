@@ -12,7 +12,7 @@ Google 官方的 [Samples](https://github.com/googlesamples/android-architecture
 ## 关键技术点
 - Room：基于 SQL 的持久化库（需掌握基础的 SQL 语句）
 - LiveData：一个**具有生命周期感知能力**的持有数据的可观测的类（类似于Rxjava 中的 Observable，但是你无需在生命周期中去 `subscribe()` 或者 `unSubscribe()`）
-- ViewModel：在生命周期中，用于存储和管理界面相关的数据。最大的特点是即使屏幕旋转配置改变也不会丢失数据。
+- ViewModel：在生命周期中，用于存储和管理界面相关的数据。最大的特点是即使屏幕旋转配置改变也不会丢失数据。有点类似于 MVP 里的 Presenter
 
 ## 使用 AAC 后的架构
 ![AAC 架构](https://upload-images.jianshu.io/upload_images/3067882-edccc85dc787af85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
