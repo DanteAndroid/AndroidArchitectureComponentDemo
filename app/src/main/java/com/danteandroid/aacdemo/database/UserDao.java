@@ -15,7 +15,11 @@ public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(UserEntity entity);
 
-    @Query("select * from UserEntity where upper(name)=upper(:userName) ")
+    /**
+     * 注意，name LIKE :userName 而不是 name = :userName
+     * 后者会匹配大小写，前者是模糊查询
+     */
+    @Query("select * from UserEntity where name like :userName")
     LiveData<UserEntity> load(String userName);
 
     @Query("select * from UserEntity")
