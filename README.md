@@ -14,5 +14,7 @@ Google 出的一套组件库（简称为 AAC）的 demo。
 
 ## 使用 AAC 后的架构
 ![AAC 架构](https://upload-images.jianshu.io/upload_images/3067882-edccc85dc787af85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
 对比一下 MVP 架构：
+
 ![MVP 架构](https://github.com/googlesamples/android-architecture/wiki/images/mvp.png)
