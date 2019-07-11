@@ -1,14 +1,13 @@
 package com.danteandroid.aacdemo.ui;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 import com.danteandroid.aacdemo.R;
 import com.danteandroid.aacdemo.viewmodel.UserViewModel;
 

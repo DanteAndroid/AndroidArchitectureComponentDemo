@@ -1,14 +1,13 @@
 package com.danteandroid.aacdemo.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
-import android.arch.lifecycle.Observer;
-import android.databinding.ObservableField;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.ObservableField;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.Observer;
 import com.danteandroid.aacdemo.App;
 import com.danteandroid.aacdemo.database.DataRepository;
 import com.danteandroid.aacdemo.entity.UserEntity;

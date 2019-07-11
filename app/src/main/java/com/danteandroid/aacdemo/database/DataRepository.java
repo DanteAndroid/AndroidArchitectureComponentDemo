@@ -1,9 +1,8 @@
 package com.danteandroid.aacdemo.database;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
 import android.util.Log;
-
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import com.danteandroid.aacdemo.entity.UserEntity;
 import com.danteandroid.aacdemo.net.WebService;
 import com.danteandroid.aacdemo.util.AppExecutors;
@@ -20,7 +19,6 @@ public class DataRepository {
     private DataRepository(UserDatabase database) {
         userDatabase = database;
         mMediatorLiveData = new MediatorLiveData<>();
-
     }
 
     public static DataRepository getsInstance(final UserDatabase database) {
